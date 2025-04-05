@@ -1,0 +1,406 @@
+/* Base Body and Animation Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0b0c10;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    scroll-behavior: smooth;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes glowText {
+    from {
+      text-shadow: 0 0 2px #ff4d6d, 0 0 4px #ff003c;
+    }
+    to {
+      text-shadow: 0 0 20px #ff4d6d, 0 0 30px #ff003c;
+    }
+  }
+  
+  /* Header Navigation */
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 15px 20px;
+    background-color: #1f1f23;
+    border-bottom: 2px solid #ff003c;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .nav-items {
+    text-decoration: none;
+    color: #ff4d6d;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-items h3 {
+    transition: 0.3s;
+    text-shadow: none;
+  }
+  
+  .nav-items:hover,
+  .nav-items:hover h3 {
+    color: white;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px #ff003c;
+  }
+  
+  /* Section Layouts */
+  section {
+    height: 100vh;
+    width: 100vw;
+    padding: 140px 40px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 40px;
+    gap: 60px;
+    text-align: center;
+  }
+  
+  .hero-image img {
+    height: 350px;
+    border-radius: 20px;
+    border: 3px solid #ff4d6d;
+    box-shadow: 0 0 30px #ff003c;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hero-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px #ff003c;
+  }
+  
+  .hero-text {
+    max-width: 600px;
+  }
+  
+  .hero-text h1,
+  .hero h1 {
+    font-size: 3rem;
+    color: #ff4d6d;
+    margin-bottom: 20px;
+    animation: glowText 2s ease-in-out infinite alternate;
+  }
+  
+  .hero-text p,
+  .hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  /* Section Titles */
+  .title,
+  .section-title {
+    font-size: 2.5rem;
+    color: #ff4d6d;
+    margin-bottom: 10px;
+    margin-top: 70px;
+    text-align: center;
+    animation: glowText 2s ease-in-out infinite alternate;
+  }
+  
+  /* About Section */
+  .about-text {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .about-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #ff003c;
+    transition: box-shadow 0.4s ease;
+    object-fit: cover;
+  }
+  
+  #about:hover .about-img {
+    box-shadow: 0 0 20px #ff4d6d, 0 0 30px #ff003c;
+  }
+  
+  /* Skills Section */
+  .skills-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .skill-card {
+    min-width: 220px;
+    max-width: 250px;
+    flex: 0 0 auto;
+    background-color: #1f1f23;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    scroll-snap-align: center;
+    box-shadow: 0 0 10px rgba(255, 77, 109, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 77, 109, 0.25);
+  }
+  
+  .skill-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .skill-card h3 {
+    color: #ff4d6d;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    animation: glowText 1.5s ease-in-out infinite alternate;
+  }
+  
+  /* Projects Section */
+  #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .project-card {
+    flex: 0 0 300px;
+    background: #1f1f23;
+    border: 1px solid #ff003c;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 77, 109, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 77, 109, 0.35);
+  }
+  
+  .project-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(255, 77, 109, 0.3);
+  }
+  
+  .project-card h3 {
+    color: #ff4d6d;
+    margin-bottom: 15px;
+    animation: glowText 1.5s ease-in-out infinite alternate;
+  }
+  
+  .project-card p {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+  
+  .project-link,
+  button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0b0c10;
+    background: linear-gradient(to right, #ff4d6d, #ff003c);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 77, 109, 0.2);
+    text-decoration: none;
+  }
+  
+  .project-link:hover,
+  button:hover {
+    background: linear-gradient(to right, #ff003c, #ff4d6d);
+    box-shadow: 0 0 15px rgba(255, 77, 109, 0.4);
+  }
+  
+  /* Contact Section */
+  #contact {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    background: rgba(15, 20, 25, 0.85);
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+  }
+  
+  .contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .contact-left-title h2 {
+    color: #ff4d6d;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact-left-title hr {
+    border: none;
+    width: 100px;
+    height: 4px;
+    background-color: #ff003c;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-inputs {
+    width: 100%;
+    height: 50px;
+    border: 2px solid #ff003c;
+    background-color: #e0e0e0;
+    padding: 0 20px;
+    font-weight: 500;
+    color: #0b0c10;
+    border-radius: 50px;
+    outline: none;
+  }
+  
+  .contact-inputs::placeholder {
+    color: #1f1f23;
+  }
+  
+  .contact-left textarea {
+    height: 140px;
+    padding: 15px 20px;
+    border-radius: 25px;
+    resize: none;
+  }
+  
+  .contact-right {
+    max-width: 600px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-image img {
+      width: 80%;
+    }
+  
+    .hero-text {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    section {
+      height: auto;
+      padding: 80px 20px;
+    }
+  
+    .skills-grid {
+      flex-wrap: wrap;
+      font-size: 0.8rem;
+    }
+  
+    .about-text {
+      font-size: 0.95rem;
+      padding: 20px;
+    }
+  
+    .skill-card img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .skill-card h3 {
+      font-size: 0.9rem;
+    }
+  
+    .contact-container {
+      flex-direction: column;
+    }
+  
+    .contact-left,
+    .contact-right {
+      width: 100%;
+      padding: 0 10px;
+    }
+  
+    .contact-inputs {
+      width: 100%;
+    }
+  }

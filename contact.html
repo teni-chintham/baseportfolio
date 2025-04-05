@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+    <header class="header-container">
+        <dotlottie-player src="https://lottie.host/d08f8c15-56ad-4e66-9834-1adae860f132/H6DY06MN0t.json" background="transparent" speed="1" style="width: 80px; height: 80px;" loop autoplay></dotlottie-player>
+        <a href="index.html" class="nav-items"><h3>HOME</h3></a>
+        <a href="about.html" class="nav-items"><h3>ABOUT</h3></a>
+        <a href="projects.html" class="nav-items"><h3>PROJECTS</h3></a>
+        <a href="contact.html" class="nav-items"><h3>CONTACT</h3></a>
+    </header>
+  <section id="contact">
+    <div class="contact-container">
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+        <div class="contact-left-title">
+          <h2>Get in touch !!</h2>
+          <hr>
+        </div>
+        <input type="hidden" name="access_key" value="60335b28-2e99-4625-bcac-b70bad945cce" />
+        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required />
+        <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required />
+        <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <div class="contact-right">
+        <lottie-player
+          src="https://lottie.host/2c1d5942-8158-4dd8-a200-6628b7c57034/9YYymH7NSP.json"
+          speed="1"
+          style="width: 100%; max-width: 600px; height: auto"
+          loop
+          autoplay>
+        </lottie-player>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
